@@ -1,20 +1,40 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Booking futsal court
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-label>Name:</ion-label>
+      <ion-input [(ngModel)]="name"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Email:</ion-label>
+      <ion-input [(ngModel)]="email"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Phone Number:</ion-label>
+      <ion-input [(ngModel)]="phone"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Type:</ion-label>
+      <ion-select [(ngModel)]="type">
+        <ion-select-option value="gold">Gold</ion-select-option>
+        <ion-select-option value="silver">Silver</ion-select-option>
+        <ion-select-option value="bronze">Bronze</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label>Date:</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-datetime display-format="MM/DD/YYYY" [(ngModel)]="date"></ion-datetime>
+    </ion-item>
+  </ion-list>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <ion-button expand="block" (click)="submitForm()">Submit</ion-button>
 </ion-content>
