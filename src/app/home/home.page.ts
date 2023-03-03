@@ -36,7 +36,7 @@ export class HomePage {
       type: this.type,
       keyAccess: '??mufr-wr$2ebec2l#riDuyutlyldras6lprotre*u$u?=uTit*es_swl',
     };
-    this.http.post('https://example.com/api/submit-form', data).subscribe((response) => {
+    this.http.post('https://amirulasri.com/ioniclabtask5/serverside/submitform', data).subscribe((response) => {
       toastsuccess.present();
       // Reset form fields
       this.name = '';

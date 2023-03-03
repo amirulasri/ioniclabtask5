@@ -7,34 +7,41 @@
 </ion-header>
 
 <ion-content>
-  <ion-list>
-    <ion-item>
-      <ion-label>Name:</ion-label>
-      <ion-input [(ngModel)]="name"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label>Email:</ion-label>
-      <ion-input [(ngModel)]="email"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label>Phone Number:</ion-label>
-      <ion-input [(ngModel)]="phone"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label>Type:</ion-label>
-      <ion-select [(ngModel)]="type">
-        <ion-select-option value="gold">Gold</ion-select-option>
-        <ion-select-option value="silver">Silver</ion-select-option>
-        <ion-select-option value="bronze">Bronze</ion-select-option>
-      </ion-select>
-    </ion-item>
-    <ion-item>
-      <ion-label>Date:</ion-label>
-    </ion-item>
-    <ion-item>
-      <ion-datetime display-format="MM/DD/YYYY" [(ngModel)]="date"></ion-datetime>
-    </ion-item>
-  </ion-list>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Membership Form</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-item>
+          <ion-label position="stacked">Name:</ion-label>
+          <ion-input [(ngModel)]="name"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Email:</ion-label>
+          <ion-input [(ngModel)]="email"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Phone Number:</ion-label>
+          <ion-input [(ngModel)]="phone"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Membership Type:</ion-label>
+          <ion-select [(ngModel)]="type">
+            <ion-select-option value="gold">Gold</ion-select-option>
+            <ion-select-option value="silver">Silver</ion-select-option>
+            <ion-select-option value="bronze">Bronze</ion-select-option>
+          </ion-select>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Date:</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-datetime display-format="MM/DD/YYYY" [(ngModel)]="date"></ion-datetime>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
 
   <ion-button expand="block" (click)="submitForm()">Submit</ion-button>
 </ion-content>
